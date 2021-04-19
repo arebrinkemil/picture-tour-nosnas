@@ -25,7 +25,7 @@ html, body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 16px;
   background-color: #000;
-  
+
 }
 
 a, a:hover, a:active, a:visited {
@@ -79,7 +79,7 @@ li a:hover {
   position: absolute;
   /*top: 0;*/
   left: 0;
-  right: 40px;
+  right: 0px;
   height: 40px;
   text-align: center;
 }
@@ -100,7 +100,7 @@ body.fullscreen-enabled.mobile #titleBar {
 
 /* If there are multiple scenes the title bar must make space for the scene list toggle */
 body.multiple-scenes #titleBar {
-  left: 40px;
+
 }
 
 body.multiple-scenes.mobile #titleBar {
@@ -186,8 +186,8 @@ body.fullscreen-enabled #fullscreenToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(255,255,255);
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgb(255,218,26);
+  background-color: rgba(255,218,26,0.8);
 }
 
 .mobile #autorotateToggle {
@@ -236,12 +236,13 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 #sceneListToggle {
   position: absolute;
   /*top: 0;*/
-  left: 0;
+right: 0;
   width: 40px;
+  margin-right: 80px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(255,255,255);
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgb(255,218,26);
+  background-color: rgba(255,218,26,0.8);
 }
 
 .mobile #sceneListToggle {
@@ -289,8 +290,9 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 #sceneList {
   position: absolute;
   /*top: 0;*/
-  left: -220px;
-  padding-top: 40px;
+  /*left: -220px;*/
+  right: -220px;
+  padding-top: 85px;
   width: 220px;
   max-height: 100%;
   overflow-x: hidden;
@@ -325,7 +327,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 #sceneList.enabled {
-  margin-left: 220px;
+  margin-right: 220px;
 }
 
 #sceneList .scene {
