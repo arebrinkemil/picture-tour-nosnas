@@ -1,0 +1,70 @@
+﻿.profile-pic {
+    /* TODO: Add opacity transition*/
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background-size: cover;
+}
+
+.profile-pic-unknown {
+    background-image: url("../../images/user-circle.svg");
+    background-repeat: no-repeat;
+    background-size: unset;
+    margin: 0;
+    padding: 0;
+    // min-width: 60px;
+    // min-height: 60px;
+    text-indent: -9999px;
+}
+
+.profile-pic-invited {
+    background-image: url("../../images/plane-icon.svg");
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    text-indent: -9999px;
+}
+
+.profile-pic {
+    &.profile-sm {
+        &.profile-pic-organization-admin:after {}
+    }
+}
+
+
+.profile-pic-organization-admin:after {
+    content: "\f084";
+    position: absolute;
+    top: 31px;
+    right: -12px;
+    font-size: 16px;
+    .fontAwesomeProPsuedoElementsLight();
+    background: @toolbarIconColor;
+    color: @toolbarColor;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    padding: 4px 8px;
+    text-indent: 0;
+}
+
+
+.profile-pic-sm {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-pic-md {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.profile-pic-lg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}

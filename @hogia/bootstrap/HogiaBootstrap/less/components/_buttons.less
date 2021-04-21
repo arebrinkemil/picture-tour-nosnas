@@ -1,0 +1,771 @@
+﻿@import '../_variables.less';
+
+.btn {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    //beta
+    display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex;
+    line-height: inherit;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 43px;
+    padding-left: 20px;
+    padding-right: 20px;
+    // padding: 9px 30px;
+    font-size: @font-size-btn;
+    // line-height: unset;
+    text-align: center;
+    letter-spacing: 1.60px;
+    vertical-align: middle;
+    height: @btn-height;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: @btn-default-color;
+    background-color: @brand-default;
+    border-radius: 4px;
+    *margin-left: .3em;
+
+    .fa {
+        padding-right: 6px;
+    }
+
+    &.fal {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    i.fal {
+        padding-right: 6px;
+        // padding-left: 10px;
+        // vertical-align: middle;
+        // font-size: @fa-regular-size;
+    }
+
+
+}
+
+
+
+//shadow used for focus on default buttons
+.btn-focus-shadow-default {
+    -webkit-box-shadow:  0 0 0 0.2rem #dadada3d;
+        box-shadow:  0 0 0 0.2rem #dadada3d;
+}
+
+.btn-focus-shadow-primary {
+    -webkit-box-shadow: 0 0 0 0.2rem rgb(167, 217, 255);
+            box-shadow: 0 0 0 0.2rem rgb(167, 217, 255);
+}
+
+.btn-focus-shadow-success {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(35, 234, 139, 0.33);
+    box-shadow: 0 0 0 0.2rem rgba(35, 234, 139, 0.33);
+}
+
+.btn-focus-shadow-info {
+    -webkit-box-shadow: 0 0 0 0.2rem rgb(186, 208, 255);
+            box-shadow: 0 0 0 0.2rem rgb(186, 208, 255);
+}
+
+.btn-focus-shadow-warning {
+    -webkit-box-shadow: 0 0 0 0.2rem rgb(255, 238, 157);
+            box-shadow: 0 0 0 0.2rem rgb(255, 238, 157);
+}
+
+.btn-focus-shadow-danger {
+    -webkit-box-shadow: 0 0 0 0.2rem rgb(255, 181, 175);
+            box-shadow: 0 0 0 0.2rem rgb(255, 181, 175);
+}
+
+.btn-light-secondary {
+    background: none;
+    border: @btn-border @brand-light-secondary;
+    color: @brand-light-secondary;
+
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: @color-dark-info;
+        background-color: @color-dark-info  !important;
+        color: @brand-light-secondary  !important;
+    }
+}
+
+
+
+.btn-default-secondary {
+    background: none;
+    border: @btn-border @brand-default-secondary;
+    color: @brand-default-secondary;
+
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    &:focus {
+        .btn-focus-shadow-default();
+        // background: darken(@gray-lighter, 10%) !important;
+        // border: @btn-secondary-border-focus @brand-default-secondary;
+        color: @gray-dark  !important;
+    }
+    &:hover,
+    &:active {
+        border-color: @gray-lighter;
+        background-color: @gray-lighter  !important;
+        color: @gray-dark  !important;
+        border: @btn-border @brand-default-secondary;
+    }
+    &:active:focus {
+        background: darken(@gray-lighter, 10%) !important;
+    }
+}
+
+.btn-primary-secondary {
+    background: none;
+    border: @btn-border @application-color;
+    color: @application-color;
+
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+
+    &:focus {
+        .btn-focus-shadow-primary();
+        // background-color: darken(@application-color-lighter, 10%) !important;
+        color: @application-color-darker;
+        // border: @btn-secondary-border-focus @application-color;
+        background-color: lighten(@application-color-lighter, 6%)  !important;
+    }
+    &:hover,
+    &:active {
+        border-color: @application-color-lighter;
+        background-color: @application-color-lighter  !important;
+        color: @application-color-darker  !important;
+        border: @btn-border @application-color;
+    }
+    &:active:focus {
+        background: darken(@application-color-lighter, 10%) !important;
+    }
+
+
+}
+
+.btn-primary-secondary when (@application-color = @color-dark-turqouise) {
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: @color-light-turqouise;
+        background-color: @color-light-turqouise  !important;
+        color: @color-dark-turqouise  !important;
+    }
+}
+
+
+.btn-success-secondary {
+    background: none;
+    border: @btn-border @color-success;
+    color: @color-success;
+
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    &:focus {
+        .btn-focus-shadow-success();
+        background-color: @color-light-success  !important;
+        color: @color-dark-success;
+        // border: @btn-secondary-border-focus @color-success;
+    }
+    &:hover,
+    &:active {
+        border: @btn-border @color-success;
+        background-color: @color-light-success  !important;
+        color: @color-dark-success  !important;
+    }
+    &:active:focus {
+        background: darken(@color-light-success, 10%) !important;
+    }
+}
+
+
+.btn-warning-secondary {
+    background: none;
+    border: @btn-border @color-warning;
+    color: @color-dark-warning;
+
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    &:focus {
+        .btn-focus-shadow-warning();
+        background-color: lighten(@color-light-warning, 5%)  !important;
+        color: @color-dark-warning;
+        // border: @btn-border @color-warning;
+    }
+    &:hover,
+    &:active {
+        border: @btn-border @color-warning;
+        background-color: @color-light-warning  !important;
+        color: @color-dark-warning  !important;
+    }
+    &:active:focus {
+        background: darken(@color-light-warning, 10%) !important;
+    }
+}
+
+
+.btn-danger-secondary {
+    background: none;
+    border: @btn-border @color-danger;
+    color: @color-danger;
+
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+
+    &:focus {
+    .btn-focus-shadow-danger();
+    background-color: lighten(@color-light-danger, 4%)  !important;
+    color: @color-dark-danger;
+    // border: @btn-secondary-border-focus @color-danger;
+    }
+
+    &:hover,
+    &:active {
+        border: @btn-border @color-danger;
+        background-color: @color-light-danger  !important;
+        color: @color-dark-danger  !important;
+    }
+    &:active:focus {
+        background: darken(@color-light-danger, 10%) !important;
+    }
+}
+
+
+
+
+.btn-info-secondary {
+    background: none;
+    border: @btn-border @color-dark-info;
+    color: @color-dark-info;
+
+    &:focus {
+        .btn-focus-shadow-info();
+        background-color: @color-light-info  !important;
+        color: @color-dark-info;
+        // border: @btn-secondary-border-focus @color-dark-info;
+    }
+    &:hover,
+    &:active {
+        border: @btn-border @color-dark-info;
+        background-color: @color-light-info  !important;
+        color: @color-dark-info  !important;
+    }
+    &:active:focus {
+        background: darken(@color-light-info, 10%) !important;
+    }
+}
+
+// .btn:focus, .btn:active:focus, .btn.active:focus {
+//     background: @brand-default;
+// }
+
+
+.btn:hover,
+.btn:focus {
+    background-color: @gray-lighter;
+    // background-image: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #f1f1f1 51%, #f1f1f1 100%);
+    text-decoration: none;
+}
+
+.btn:active,
+.btn.active {
+    *background-color: @application-color-glow;
+    background-color: @application-color-glow;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+.btn:first-child {
+    *margin-left: 0;
+}
+
+.btn:focus {
+    /*outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;*/
+    outline: none;
+}
+
+.btn.disabled,
+.btn[disabled] {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    .opacity(.25);
+    .box-shadow(none);
+    -webkit-filter: grayscale(50%);
+}
+
+.btn-default {
+    @brand-default-darker: darken(@brand-default, 5%);
+    &:focus {
+        .btn-focus-shadow-default();
+        background-color: @brand-default;
+        color: @body-color;
+        // border: @btn-border-focus @brand-default-darker;
+
+            
+    }
+    &:active:focus {
+        background: @brand-default !important;
+    }
+
+    &:active {
+        background-color: @brand-default-darker;
+        color: @body-color;       
+    }
+    &:hover {
+        background-color: @brand-default-darker;
+    }
+}
+
+.btn-default[disabled] {
+    .opacity(.55);
+    color: #949494;
+}
+
+.btn-link[disabled] {
+    .opacity(.55);
+    -webkit-filter: grayscale(100%);
+}
+
+.btn-lg {
+    height: @btn-lg;
+    font-size: @font-size-base;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"] {
+    margin-top: 4px;
+}
+
+.btn-sm {
+    // padding: 7px 10px 4px 10px;
+    height: @btn-sm;
+    font-size: 13px;
+}
+
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
+    margin-top: 0;
+}
+
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"] {
+    margin-top: -1px;
+}
+
+.btn-xs {
+    // padding: 2px 5px 0px 5px;
+    height: @btn-xs;
+    font-size: 10px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.btn-block+.btn-block {
+    margin-top: 5px;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+    width: 100%;
+}
+
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+
+.btn-primary {
+    *background-color: @btnPrimaryBackgroundHighlight;
+    color: #ffffff;
+    background-color: @btnPrimaryBackgroundHighlight;
+    &:focus{
+        .btn-focus-shadow-primary();
+
+        @btnDark: darken(@btnPrimaryBackground, 10%);
+
+        // border: @btn-border-focus @btnDark;
+        background-color: @btnPrimaryBackgroundHighlight;
+    }
+    &:active:focus {
+        background: @btnPrimaryBackgroundHighlight;
+    }
+    &:active {
+        @btnLight: darken(@btnPrimaryBackgroundHighlight, 10%);
+        @btnDark: darken(@btnPrimaryBackground, 10%);
+        background-color: @btnDark;
+    }
+    &:hover {
+        @btnLight: darken(@btnPrimaryBackgroundHighlight, 10%);
+        @btnDark: darken(@btnPrimaryBackground, 10%);
+        background-color: @btnDark;
+    }
+}
+
+
+.btn-primary when (@application-color =@color-dark-turqouise) {
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: @color-dark-turqouise;
+        background-color: @color-dark-turqouise  !important;
+        color: @color-dark-turqouise  !important;
+    }
+}
+
+.btn-warning {
+    border:none;
+    // border: @btn-border @btnWarningBackground;
+    *background-color: @btnWarningBackgroundHighlight;
+    background-color: @btnWarningBackgroundHighlight;
+    color: #000000;
+    &:focus{
+    .btn-focus-shadow-warning();
+    // @btnDark: darken(@btnWarningBackground, 5%);
+    // border: @btn-border @btnWarningBackground;
+    background-color: @btnWarningBackground;
+    color: @body-color;
+    }
+    &:active:focus {
+        background: @btnWarningBackgroundHighlight;
+    }
+    &:hover {
+        @btnLight: darken(@btnWarningBackgroundHighlight, 10%);
+        @btnDark: darken(@btnWarningBackground, 5%);
+        // border: @btn-border @btnWarningBackground;
+        background-color: @btnDark;
+        color: @body-color;
+    }
+    &:active{
+        // @btnLight: darken(@btnWarningBackgroundHighlight, 10%);
+        @btnDark: darken(@btnWarningBackground, 5%);
+        // border: @btn-border @btnWarningBackground;
+        background-color: @btnDark;
+    }
+}
+
+
+.btn-danger {
+    // border: @btn-border @btnDangerBackgroundHighlight;
+    *background-color: @btnDangerBackgroundHighlight;
+    color: #ffffff;
+    background-color: @btnDangerBackgroundHighlight;
+    &:focus {
+        .btn-focus-shadow-danger();
+        // @btnDark: darken(@btnDangerBackground, 10%);
+        // border: @btn-border @btnDangerBackgroundHighlight;
+        color: #ffffff;
+        background-color: @btnDangerBackgroundHighlight;
+    }
+    &:active:focus {
+        background: @btnDangerBackgroundHighlight;
+    }
+    &:active {
+        @btnLight: darken(@btnDangerBackgroundHighlight, 10%);
+        @btnDark: darken(@btnDangerBackground, 10%);
+    
+        // border: 1px solid @btnLight;
+        color: #ffffff;
+        background-color: @btnDark;
+    }
+    &:hover {
+        @btnLight: darken(@btnDangerBackgroundHighlight, 10%);
+        @btnDark: darken(@btnDangerBackground, 10%);
+    
+        // border: @btn-border @btnLight;
+        color: #ffffff;
+        background-color: @btnDark;
+    }
+}
+
+
+.btn-success {
+    border: 1px solid @btnSuccessBackgroundHighlight;
+    *background-color: @btnSuccessBackgroundHighlight;
+    color: #ffffff;
+    background-color: @btnSuccessBackgroundHighlight;
+    &:focus {
+        .btn-focus-shadow-success();
+        // @btnDark: darken(@btnSuccessBackground, 10%);
+        background-color: @btnSuccessBackgroundHighlight;
+        // border: @btn-border @btnSuccessBackgroundHighlight;
+    }
+    &:active:focus {
+        background: @btnSuccessBackgroundHighlight !important;
+    }
+    &:active {
+        @btnLight: darken(@btnSuccessBackgroundHighlight, 10%);
+        @btnDark: darken(@btnSuccessBackground, 10%);
+        background-color: @btnDark;
+    }
+    &:hover {
+        @btnLight: darken(@btnSuccessBackgroundHighlight, 10%);
+        @btnDark: darken(@btnSuccessBackground, 10%);
+        background-color: @btnDark;
+    }
+    .btn:focus, .btn:active:focus, .btn.active:focus {
+        background:@btnSuccessBackgroundHighlight;
+    }
+}
+
+
+.btn-info {
+    // border: @btn-border @color-info;
+    *background-color: @color-info;
+    color: #ffffff;
+    background-color: @color-info;
+    &:focus {
+        .btn-focus-shadow-info();
+        // @btnDark: darken(@btnInfoBackground, 10%);
+    
+        // border: @btn-border @color-info;
+        color: #ffffff;
+        background-color: @color-info; 
+    }
+    &:active:focus {
+        background: @color-info !important;
+    }
+    &:active {
+        @btnLight: darken(@btnInfoBackgroundHighlight, 10%);
+        @btnDark: darken(@btnInfoBackground, 10%);
+    
+        // border: @btn-border @btnLight;
+        color: #ffffff;
+        background-color: @btnDark;
+    }
+    &:hover {
+        @btnLight: darken(@btnInfoBackgroundHighlight, 10%);
+        @btnDark: darken(@btnInfoBackground, 10%);
+    
+        // border: 1px solid @btnLight;
+        color: #ffffff;
+        background-color: @btnDark;        
+    }
+}
+
+.btn-inverse {
+    border: 1px solid #343434;
+    *background-color: #343434;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    color: #ffffff;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-color: #343434;
+}
+
+.btn-inverse:hover,
+.btn-inverse:focus {
+
+    @btnLight: darken(@btnInverseBackgroundHighlight, 10%);
+    @btnDark: darken(@btnInverseBackground, 10%);
+
+    border: 1px solid @btnLight;
+    color: #ffffff;
+    background-color: @btnDark;
+}
+
+.btn-inverse:active,
+.btn-inverse.active {
+    @btnLight: @btnInverseBackgroundHighlight;
+    @btnDark: @btnInverseBackground;
+
+    border: 1px solid @btnLight;
+    background-color: @btnDark;
+}
+
+button.btn,
+input[type="submit"].btn {
+    *padding-top: 3px;
+    *padding-bottom: 3px;
+}
+
+button.btn::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+button.btn.btn-large,
+input[type="submit"].btn.btn-large {
+    *padding-top: 7px;
+    *padding-bottom: 7px;
+}
+
+button.btn.btn-small,
+input[type="submit"].btn.btn-small {
+    *padding-top: 3px;
+    *padding-bottom: 3px;
+}
+
+button.btn.btn-mini,
+input[type="submit"].btn.btn-mini {
+    *padding-top: 1px;
+    *padding-bottom: 1px;
+}
+
+.btn-link,
+.btn-link:active,
+.btn-link[disabled] {
+    background-color: transparent;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: @color-gray-disabled-background 1px solid;
+}
+
+.btn-link {
+    border-color: transparent;
+    cursor: pointer;
+    color: @application-color-darker;
+    background-color: transparent;
+    background-image: none;
+    /*padding: 8px 18px 8px 18px;*/
+
+    &.btn-link-default {
+        color: @color-gray-text;
+    }
+
+    &.btn-link-primary {
+        color: @application-color-darker;
+    }
+
+    &.btn-link-success {
+        color: @color-dark-success;
+    }
+
+    &.btn-link-info {
+        color: @color-dark-info;
+    }
+
+    &.btn-link-warning {
+        color: @color-dark-warning;
+    }
+
+    &.btn-link-danger {
+        color: @color-dark-danger;
+    }
+}
+
+.btn-link:hover,
+.btn-link:focus {
+    color: @color-gray-unf;
+    /*text-decoration: underline;*/
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid @gray-light;
+
+
+    &.btn-link-default:hover,
+    &.btn-link-default:focus {
+        color: @color-gray-unf;
+        border: 1px solid @gray-light;
+    }
+
+    &.btn-link-primary:hover,
+    &.btn-link-primary:focus {
+        color: @application-color;
+        border: 1px solid @application-color-darker;
+    }
+
+    &.btn-link-success:hover,
+    &.btn-link-success:focus {
+        color: @color-success;
+        border: 1px solid @color-dark-success;
+    }
+
+    &.btn-link-info:hover,
+    &.btn-link-info:focus {
+        color: @color-info;
+        border: 1px solid @color-dark-info;
+    }
+
+    &.btn-link-warning:hover,
+    &.btn-link-warning:focus {
+        color: @color-dark-warning;
+        border: 1px solid @color-dark-warning;
+    }
+
+    &.btn-link-danger:hover,
+    &.btn-link-danger:focus {
+        color: @color-dark-danger;
+        border: 1px solid @color-dark-danger;
+    }
+}
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+
+.btn-default .btn-lg {
+    // Compensate for border thickness.
+    height: @btn-lg;
+}
+
+
+.btn-default .btn-sm {
+    // Compensate for border thickness.
+height: @btn-sm;
+}
+
+
+.btn-default .btn-xs {
+    // Compensate for border thickness.
+    // padding: 1px 5px -1px 5px;
+    height:@btn-xs;
+}
+
+.form-control.component_input_search_button {
+    width: 100%;
+}

@@ -1,0 +1,242 @@
+﻿@import '../_variables.less';
+
+body {
+    font-family: "Lato", Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: @font-size-base;
+    font-variant-ligatures: none;
+    letter-spacing: @base-font-letter-spacing;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h6 {
+    font-family: @headingsFontFamily;
+    font-variant-ligatures: none;
+
+}
+
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    // margin-top: (@line-height-computed * 1.8);
+}
+
+.condensed-heading {
+    // margin-top: (@line-height-computed / 2);
+}
+
+h1,
+.h1 {
+    font-size: @font-size-h1;
+    letter-spacing: @headings-letter-spacing;
+
+    .bold {
+        font-weight: 800;
+    }
+}
+
+h2,
+.h2 {
+    font-size: @font-size-h2;
+    letter-spacing: @headings-letter-spacing;
+
+    .bold {
+        font-weight: 800;
+    }
+}
+
+h3,
+.h3 {
+    font-family: @headingsFontFamily;
+    font-size: @font-size-h3;
+    letter-spacing: @headings-letter-spacing;
+
+    .bold {
+        font-weight: 800;
+    }
+}
+
+h4,
+.h4 {
+    font-family: @headingsFontFamily;
+    font-size: @font-size-h4;
+    letter-spacing: @headings-letter-spacing;
+}
+
+h5,
+.h5 {
+
+    font-size: @font-size-h5;
+    // font-weight: 800;
+    font-family: @headingsFontFamily;
+    letter-spacing: @headings-letter-spacing;
+    font-variant-ligatures: none;
+    /*font-weight: 800;
+    letter-spacing: 1px;*/
+    line-height: 25px;
+
+    /*text-transform: uppercase;
+    color: @gray-light;*/
+    &.bold {
+        font-weight: 800;
+    }
+}
+
+h6,
+.h6 {
+    font-family: "Lato";
+    font-weight: 800;
+    font-size: @font-size-h6;
+    letter-spacing: @larger-letter-spacing;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: @gray-dark;
+}
+
+
+.mega-size {
+    line-height: 80px;
+    font-size: @font-size-mega;
+}
+
+.h8 .mega-size {
+    font-size: @font-size-mega;
+    line-height: 80px;
+    font-weight: 100;
+}
+
+.large-title {
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: @headingsFontFamily;
+}
+
+.large-title.light {
+    color: #fefefe;
+}
+
+.small-title {
+    font-size: @font-size-base;
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Lato Regular";
+}
+
+.small-title.light {
+    color: #fefefe;
+}
+
+.underline {
+    position: relative;
+    margin-bottom: @line-height-computed;
+    padding-bottom: 19px;
+}
+
+.underline:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: @coolGray3;
+    background-color:@color-hogia-yellow;
+    height: 4px;
+}
+
+.underline-primary:after {
+    height: 2px;
+    background-color: @application-color;
+}
+
+.underline-info:after {
+    height: 2px;
+    background-color: @info-color;
+}
+
+.underline-success:after {
+    height: 2px;
+    background-color: @success-color;
+}
+
+.underline-warning:after {
+    height: 2px;
+    background-color: @warning-color;
+}
+
+.underline-danger:after {
+    height: 2px;
+    background-color: @danger-color;
+}
+
+.underline-light:after {
+    height: 2px;
+    background-color: @gray-lighter;
+}
+
+.underline-dark:after {
+    height: 2px;
+    background-color: @gray;
+}
+
+h1.underline:after {
+    width: 200px;
+}
+
+
+h1 .fa {
+    margin-right: 15px;
+    font-size: 33px;
+}
+
+h2.underline:after {
+    width: 120px;
+}
+
+h3.underline:after {
+    width: 80px;
+}
+
+h4.underline:after,
+h5.underline:after,
+h6.underline:after {
+    width: 80px;
+}
+
+h4.underline,
+h5.underline,
+h6.underline {
+    padding-bottom: 8px;
+}
+
+.underline.text-center:after {
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+
+.text-center .underline:after {
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}

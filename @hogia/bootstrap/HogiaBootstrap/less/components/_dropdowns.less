@@ -1,0 +1,26 @@
+@import '../_variables.less';
+
+.dropdown.open {
+    .context-circle {
+        background: @application-color-transparent;
+        color: @application-color;
+        font-size: @fa-medium-size;
+    }
+}
+
+.context-circle {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+
+    &:hover {
+
+        background-color: darken(@application-color, 80%);
+        color: @application-color;
+    }
+
+}

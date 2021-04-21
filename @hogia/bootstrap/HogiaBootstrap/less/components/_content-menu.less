@@ -1,0 +1,39 @@
+﻿@import '../_variables.less';
+
+ul.content-menu {
+    list-style: none;
+    display: block;
+    padding: 30px 0;
+    border-bottom: 1px solid @gray-lighter;
+
+    li {
+        float: left;
+        margin-right: 25px;
+        a {
+            color: #000;
+            text-transform: uppercase;
+            margin-right: 0;
+            cursor: pointer;
+
+            &:hover {
+                color:#000;
+            }
+
+            &.active {
+                color: @toolbarActiveMenuItemColor;
+            }
+
+            + span {
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    ul.content-menu {
+        li {
+            float: none;
+        }
+    }
+}

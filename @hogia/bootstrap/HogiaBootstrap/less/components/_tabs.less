@@ -1,0 +1,57 @@
+﻿@import '../_variables.less';
+
+/* Tabs Top */
+ul.tabs-top {
+    list-style: none;
+    // font-size: 0.95em;
+    // font-weight: 600;
+}
+
+ul.tabs-top li {
+    background: #ececec;
+    margin-right: 3px;
+    display: block;
+    float: left;
+}
+
+ul.tabs-top li a {
+    padding: 8px 20px 7px;
+    color: #696969;
+    display: block;
+    text-decoration: none;
+
+    small {
+        color: @color-gray-card-in-card;
+        margin-left: 10px;
+    }
+}
+
+ul.tabs-top li a:hover {
+    background: #fefefe;
+    color: #587898;
+
+    small {
+        color: #587898;
+    }
+}
+
+ul.tabs-top li.active {
+    background: #fff;
+}
+
+ul.tabs-top.light li.active {
+    background: #f8f8f8;
+}
+
+ul.tabs-top li:first-child {
+    border-radius: 4px 0 0 0;
+}
+
+ul.tabs-top li:last-child {
+    border-radius: 0 4px 0 0;
+}
+
+ul.tabs-top li.active a {
+    color: #555;
+    cursor: default;
+}

@@ -1,0 +1,159 @@
+﻿@import '../_variables.less';
+
+.report-menu {
+    position: absolute;
+    width: 100%;
+    margin-bottom: -99999px !important;
+    padding-bottom: 99999px !important;
+    overflow: hidden;
+    height: 100%;
+    background-color: @coolGray2;
+    margin-top: -20px;
+    margin-left: -40px;
+    padding: 30px 20px;
+
+    h6 {
+        margin: 0 40px 20px;
+    }
+
+    > ul > li {
+        padding: 10px 0;
+
+        > ul {
+            padding: 10px 0 10px 30px;
+        }
+    }
+
+    li {
+        list-style: none;
+        padding: 6px 0;
+        color: @toolbarMenuItemColor;
+        font-weight: 700;
+
+        a {
+            color: @toolbarMenuItemColor;
+            font-weight: 500;
+            padding: 8px 10px;
+            border-left: 2px solid transparent;
+
+            &:hover {
+                text-decoration: none;
+                border-left: 2px solid @application-color;
+            }
+
+            &.active {
+                border-left: 2px solid @application-color;
+                color: @application-color;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.report-select-menu {
+    margin-bottom: 50px;
+}
+
+.report-title {
+    border-bottom: 2px solid @application-color-lighter;
+    display: inline-block;
+    margin: 10px 0;
+
+    h1, h4, span {
+        display: inline-block;
+        margin-top: 10.5px;
+        margin-bottom: 10.5px;
+    }
+
+    h4 {
+        margin-right: 15px;
+    }
+
+    span {
+        color: @gray-light;
+    }
+}
+
+.report-header {
+    margin-top: -20px;
+    background: @coolGray1;
+    padding: 30px 40px 10px;
+    border-bottom: 4px solid @coolGray2;
+    margin-right: -15px;
+    margin-left: -40px;
+
+    .report-breadcrumb {
+        ul {
+            list-style:none;
+            padding: 0;
+
+            li {
+                float: left;
+                margin-right: 20px;
+
+                a {
+                    color: @gray-light;
+
+                    &:after {
+                        content: "";
+                        border-color: transparent @gray-light;
+                        border-style: solid;
+                        border-width: 4px 0 4px 5px;
+                        display: inline-block;
+                        height: 0;
+                        width: 0;
+                        left: 8px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+
+    .report-title {
+        border-color: @application-color;
+    }
+
+    .report-filter {
+        margin: 30px 0;
+
+        label {
+            font-weight: 300;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #aaa;
+            margin-top: 15px;
+        }
+
+        .middle-align {
+            display: block;
+            text-align: center;
+            padding-top: 7px;
+        }
+    }
+}
+
+.report-callout {
+    margin: 30px 0 0;
+}
+
+.report-actions {
+    margin: 30px 0;
+
+    span {
+        padding-right: 25px;
+        vertical-align: middle;
+
+        i {
+            padding-right: 8px;
+        }
+    }
+}
+
+.report-table {
+    a.disabled {
+        pointer-events: none;
+        cursor: default;
+    }
+}

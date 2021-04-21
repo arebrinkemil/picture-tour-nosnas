@@ -1,0 +1,179 @@
+﻿
+label.switch {
+    position: relative;
+    display: inline-block;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    float: right;
+}
+
+label.switch input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    left: -999em;
+}
+
+label.switch input[type="checkbox"]:checked + span {
+    box-shadow: inset @application-color 0 0 0 15px;
+}
+
+label.switch input[type="checkbox"]:checked + span > span {
+    -webkit-transform: translate3d(1.5em, 0, 0);
+    transform: translate3d(1.5em, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.4) 0 1px 4px;
+}
+
+label.switch input[type="checkbox"]:checked:active + span > span {
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    -webkit-transform: translate3d(1.5em, 0, 0) scaleX(1.1);
+    transform: translate3d(1.5em, 0, 0) scaleX(1.1);
+}
+
+label.switch input[type="checkbox"]:checked:focus + span {
+    box-shadow: inset lighten(@application-color, 10%) 0 0 0 15px, #7dc7f8 0 0 5px;
+}
+
+label.switch input[type="checkbox"]:checked:focus + span > span,
+label.switch input[type="checkbox"]:checked:hover + span > span {
+    box-shadow: rgba(0, 0, 0, 0.45) 0 1px 5px;
+}
+
+label.switch input[type="checkbox"]:active + span > span {
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transform: scaleX(1.1);
+    transform: scaleX(1.1);
+}
+
+label.switch input[type="checkbox"]:focus + span {
+    box-shadow: inset #a1a1a1 0 0 0 1px, inset rgba(0, 0, 0, 0.05) 0 1px 2px, inset #b3b3b3 0 0 0 0, rgba(157, 157, 157, 0.5) 0 0 5px;
+}
+
+label.switch input[type="checkbox"]:focus + span,
+label.switch input[type="checkbox"]:hover + span {
+    opacity: 1;
+}
+
+label.switch input[type="checkbox"]:focus + span > span,
+label.switch input[type="checkbox"]:hover + span > span {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 1px 5px;
+}
+
+label.switch input[type="checkbox"][disabled] + span {
+    opacity: .4;
+    cursor: default;
+    background-color: #bfbfbf;
+}
+
+label.switch input[type="checkbox"][disabled] + span > span {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+}
+
+label.switch input[type="checkbox"] + span {
+    opacity: .9;
+    cursor: pointer;
+    display: block;
+    vertical-align: middle;
+    width: 3em;
+    height: 1.45em;
+    border-radius: 999px;
+    background-color: #b3b3b3;
+    transition-duration: 0.35s;
+    transition-property: background-color, box-shadow, opacity;
+    box-shadow: inset #a1a1a1 0 0 0 1px, inset rgba(0, 0, 0, 0.05) 0 1px 2px, inset #b3b3b3 0 0 0 0;
+}
+
+label.switch input[type="checkbox"] + span > span {
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: inherit;
+    background: #fdfdfd;
+    transition-timing-function: cubic-bezier(0.54, 1.85, 0.5, 1);
+    transition-duration: 0.35s;
+    transition-property: -webkit-transform, background-color, box-shadow;
+    transition-property: transform, background-color, box-shadow;
+    pointer-events: none;
+    margin-top: 1.25px;
+    margin-left: 1.4px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+
+.switch-label {
+    vertical-align: top;
+    margin-right: 2rem;
+}
+
+
+
+// Alternate switches
+// --------------------------------------------------
+
+label.switch-default input[type="checkbox"]:checked + span {
+    .switch-variant(@brand-primary;);
+}
+
+label.switch-default input[type="checkbox"]:checked:focus + span {
+    .switch-variant-focused(@brand-primary;);
+}
+
+label.switch-primary input[type="checkbox"]:checked + span {
+    .switch-variant(@application-color);
+}
+
+label.switch-primary input[type="checkbox"]:checked:focus + span {
+    .switch-variant-focused(@application-color;);
+}
+
+// Success appears as green
+label.switch-success input[type="checkbox"]:checked + span {
+    .switch-variant(@brand-success);
+}
+
+label.switch-success input[type="checkbox"]:checked:focus + span {
+    .switch-variant-focused(@brand-success;);
+}
+// Info appears as blue-green
+label.switch-info input[type="checkbox"]:checked + span {
+    .switch-variant(@brand-info);
+}
+
+label.switch-info input[type="checkbox"]:checked:focus + span {
+    .switch-variant-focused(@brand-info;);
+}
+
+// Warning appears as orange
+label.switch-warning input[type="checkbox"]:checked + span {
+    .switch-variant(@brand-warning);
+}
+
+label.switch-warning input[type="checkbox"]:checked:focus + span {
+    .switch-variant-focused(@brand-warning;);
+}
+
+// Danger and error appear as red
+label.switch-danger input[type="checkbox"]:checked + span {
+    .switch-variant(@brand-danger);
+}
+
+label.switch-danger input[type="checkbox"]:checked:focus + span {
+    .switch-variant-focused(@brand-danger;);
+}
+
+
+// Button variants
+// -------------------------
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+.switch-variant(@color) {
+    box-shadow: inset @color 0 0 0 15px;
+}
+
+.switch-variant-focused(@color) {
+    box-shadow: inset lighten(@color, 10%) 0 0 0 15px, #7dc7f8 0 0 5px;
+}

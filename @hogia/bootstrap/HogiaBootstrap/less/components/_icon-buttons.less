@@ -1,0 +1,278 @@
+﻿@import '../_variables.less';
+//refactor this later used in both buttons and icon buttons!
+//shadow used for focus on default buttons
+//shadow used for focus on default buttons
+.btn-focus-shadow-default {
+    -webkit-box-shadow:  0 0 0 0.15rem #dadada;
+        box-shadow:  0 0 0 0.15rem #dadada;
+}
+
+.btn-focus-shadow-primary {
+    -webkit-box-shadow: 0 0 0 0.15rem rgb(167, 217, 255);
+            box-shadow: 0 0 0 0.15rem rgb(167, 217, 255);
+}
+
+.btn-focus-shadow-success {
+    -webkit-box-shadow: 0 0 0 0.15rem rgba(35, 234, 139, 0.33);
+    box-shadow: 0 0 0 0.15rem rgba(35, 234, 139, 0.33);
+}
+
+.btn-focus-shadow-info {
+    -webkit-box-shadow: 0 0 0 0.15rem rgb(186, 208, 255);
+            box-shadow: 0 0 0 0.15rem rgb(186, 208, 255);
+}
+
+.btn-focus-shadow-warning {
+    -webkit-box-shadow: 0 0 0 0.15rem rgb(255, 238, 157);
+            box-shadow: 0 0 0 0.15rem rgb(255, 238, 157);
+}
+
+.btn-focus-shadow-danger {
+    -webkit-box-shadow: 0 0 0 0.15rem rgb(255, 181, 175);
+            box-shadow: 0 0 0 0.15rem rgb(255, 181, 175);
+}
+//refactor this end
+
+.btn-icon {
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    letter-spacing: 1.60px;
+    //margin
+    // margin-top: .25rem;
+    // margin-bottom: .25rem;
+    //end margin
+    // min-width: 180px;
+    // height: unset;
+    text-transform: uppercase;
+    // border-radius: 4px;
+    // border: @btn-border @brand-default-secondary;
+    border: none;
+
+    display: inline-block;
+    height: 43px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0;
+    // line-height: 30px;
+    text-align: center;
+    // vertical-align: middle;
+    cursor: pointer;
+    color: #333;
+    background: transparent;
+    border-radius: 4px;
+    // border: 0px;
+    // outline: none;
+    font-size: 15px;
+
+    span {
+        vertical-align: middle;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    i.fal {
+        padding-right: 6px;
+        // vertical-align: middle;
+        // font-size: @fa-regular-size;
+    }
+
+    &.btn-icon-xs {
+        height: @btn-xs;
+        // padding: 6px;
+        font-size: 10px;
+        line-height: 16px;
+
+    }
+
+    &.btn-icon-sm {
+height: @btn-sm;
+        font-size: @font-size-btn;
+
+    }
+
+    &.btn-icon-md {
+        // padding: 7px 10px 4px 10px;
+        height: @btn-md;
+        font-size: @font-size-btn;
+
+    }
+
+    &.btn-icon-lg {
+height: @btn-lg;
+        font-size: @font-size-base;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+    }
+
+
+    .fa {
+        // display: block;
+        display: inline;
+        padding-right: 10px;
+    }
+
+    &.btn-icon-primary {
+        color: @application-color;
+        background: transparent;
+
+        // border: @btn-border @application-color;
+        // color: @application-color;
+        
+        &:focus {
+            .btn-focus-shadow-primary();
+            // background-color: darken(@application-color-lighter, 10%) !important;
+            color: @application-color-darker;
+        }
+        &:hover {
+            .fa {
+                color: @application-color-darker
+            }
+
+            border-color:@application-color-lighter;
+            background-color: @application-color-lighter  !important;
+            color:@application-color-darker;
+        }
+
+        &:active:focus {
+            background-color: @application-color-lighter;
+        }
+        &:active{
+            background-color: @application-color-darker;
+        }
+
+        .fa {
+            color: @application-color
+        }
+    }
+
+    &.btn-icon-primary when (@application-color =@color-dark-turqouise) {
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: @color-light-turqouise;
+            background-color: @color-light-turqouise  !important;
+            color: @color-dark-turqouise  !important;
+        }
+    }
+
+    &.btn-icon-danger {
+        // border: @btn-border @color-danger;
+        color: @color-danger;
+
+        .fa {
+            color: @color-danger;
+        }
+
+        &:hover {
+            .fa {
+                color: @color-dark-danger
+            }
+            background-color: @color-light-danger  !important;
+            color: @color-dark-danger;
+        }
+
+        &:focus {
+            .btn-focus-shadow-danger();
+            // background: darken(@color-light-danger, 10%) !important;
+            color: @color-dark-danger;
+            }
+
+
+    }
+
+    &.btn-icon-default {
+
+
+        &:hover {
+            border-color: @gray-lighter;
+            background-color: @gray-lighter  !important;
+            color: @gray-dark;
+        }
+
+        &:focus {
+            .btn-focus-shadow-default();
+            // background: darken(@gray-lighter, 10%) !important;
+            color: @gray-dark  !important;
+        }
+    }
+
+    &.btn-icon-success {
+        color: @color-success;
+
+        &:hover {
+            .fa {
+                color: @color-dark-success
+            }
+
+            border-color: @color-light-success;
+            background-color: @color-light-success  !important;
+            color:@color-dark-success;
+
+
+        }
+
+        &:focus {
+            .btn-focus-shadow-success();
+            // background: darken(@color-light-success, 10%) !important;
+            color: @color-dark-success;
+        }
+
+        .fa {
+            color: @color-success
+        }
+    }
+
+    &.btn-icon-warning {
+        // border: @btn-border @color-warning;
+        color: @color-dark-warning;
+
+        .fa {
+            color: @color-dark-warning;
+        }
+
+        &:hover {
+            .fa {
+                color: @color-dark-warning;
+            }
+
+            border-color: @color-light-warning ;
+            background-color: @color-light-warning  !important;
+            color: @color-dark-warning;
+        }
+
+        &:focus {
+            .btn-focus-shadow-warning();
+            // background: lighten(@color-warning, 25%) !important;
+            color: @color-dark-warning;
+        }
+    }
+
+    &.btn-icon-info {
+        // border: @btn-border @color-dark-info;
+        color: @color-dark-info;
+
+        .fa {
+            color: @color-dark-info;
+        }
+
+        &:hover {
+            border-color: @color-light-info;
+            background-color: @color-light-info  !important;
+            color: @color-dark-info;
+
+            .fa {
+                color: @color-dark-info;
+            }
+        }
+
+        &:focus {
+            .btn-focus-shadow-info();
+            // background: darken(@color-light-info, 10%) !important;
+            color: @color-dark-info;
+        }
+    }
+}

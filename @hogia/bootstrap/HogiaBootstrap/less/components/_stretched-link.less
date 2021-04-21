@@ -1,0 +1,13 @@
+﻿/*-- Stretched link --*/
+/*-- Borrowed style from Bootstrap 4.5 https://getbootstrap.com/docs/4.5/utilities/stretched-link/*/
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  /* Just in case `pointer-events: none` is set on a parent */
+  pointer-events: auto;
+  content: "";
+}

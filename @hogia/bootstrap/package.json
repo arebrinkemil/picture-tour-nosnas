@@ -1,0 +1,81 @@
+{
+  "_from": "@hogia/bootstrap@^3.5.4",
+  "_id": "@hogia/bootstrap@3.6.1",
+  "_inBundle": false,
+  "_integrity": "sha1-o7HdEmRnGQ2NHPFxXc73Hc09NoM=",
+  "_location": "/@hogia/bootstrap",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@hogia/bootstrap@^3.5.4",
+    "name": "@hogia/bootstrap",
+    "escapedName": "@hogia%2fbootstrap",
+    "scope": "@hogia",
+    "rawSpec": "^3.5.4",
+    "saveSpec": null,
+    "fetchSpec": "^3.5.4"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://pkgs.dev.azure.com/Hogia/_packaging/StarNpm/npm/registry/@hogia/bootstrap/-/bootstrap-3.6.1.tgz",
+  "_shasum": "a3b1dd126467190d8d1cf1715dcef71dcd3d3683",
+  "_spec": "@hogia/bootstrap@^3.5.4",
+  "_where": "C:\\Users\\emil.arebrink\\Downloads\\picture-tour-nosnas",
+  "author": {
+    "name": "Hogia Infrastructure Products AB"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@fortawesome/fontawesome-pro": "^5.12.0"
+  },
+  "deprecated": false,
+  "description": "Hogia Bootstrap",
+  "devDependencies": {
+    "conventional-changelog": "1.1.0",
+    "del": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^5.1.0",
+    "gulp-bump": "^0.1.11",
+    "gulp-changed": "^1.3.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-jshint": "^1.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-yuidoc": "^0.1.2",
+    "jshint-stylish": "^1.0.0",
+    "jspm": "^0.16.10",
+    "path": "^0.11.14",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.2",
+    "vinyl-paths": "^2.0.0"
+  },
+  "jspm": {
+    "main": "index",
+    "dependencies": {},
+    "devDependencies": {
+      "traceur": "github:jmcriffey/bower-traceur@0.0.92",
+      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.92"
+    }
+  },
+  "keywords": [
+    "Hogia",
+    "Twitter",
+    "Bootstrap"
+  ],
+  "less": "HogiaBootstrap/less/bootstrap.less",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "@hogia/bootstrap",
+  "repository": {
+    "type": "git",
+    "url": "https://hogia@dev.azure.com/Hogia/Infrastructure/_git/INF_HogiaBootstrap"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "style": "HogiaBootstrap/dist/css/bootstrap.css",
+  "types": "typings/index.d.ts",
+  "version": "3.6.1"
+}

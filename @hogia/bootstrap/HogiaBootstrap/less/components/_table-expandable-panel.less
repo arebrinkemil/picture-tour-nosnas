@@ -1,0 +1,184 @@
+﻿@import '../_variables.less';
+
+.table.table-expandable-panel {
+     > thead > tr > th,
+     > thead > tr {
+        border:0
+    }
+
+    > tbody > tr{
+        border-left: none;
+        border-right: none;
+    }
+
+    > tbody > tr:hover{
+        border-left: none;
+        border-right: none;
+    }
+
+    > tbody > tr > td{
+        padding:0;
+        border-top:0;
+    }
+
+    > tbody > tr > td:hover,
+    > thead > tr > td:hover{
+        background-color:#fff;
+        cursor:pointer;
+    }
+
+    > thead > tr#postContainer > td{
+        border:0; padding:0
+    }
+
+    > tbody > tr:nth-child(odd) > td:hover,
+    > thead > tr:nth-child(odd) > td:hover{
+        background-color:#f9f9f9;
+    }
+
+    > tbody > tr > td > div.static-row, 
+    > thead > tr > td > div > div.static-row{
+        padding:11px 8px 8px 8px;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;             
+    }
+
+    > tbody > tr > td > div.static-row:hover{
+        background-color: @table-bg-hover;     
+    }
+
+    > tbody > tr > td > div.expandable-form > div:nth-of-type(1),
+    > thead > tr > td > div > div.expandable-form {
+        border-left:1px solid #ddd;
+        border-right:1px solid #ddd;
+        border-bottom:1px solid #ddd;
+        padding:20px;
+    }
+
+    > tbody > tr > td > div.expandable-form:hover{
+        cursor:default;
+    }
+
+    > tbody > tr > td > div.expandable-form label:hover{
+        cursor:text;
+    }
+
+    > tbody > tr > td > div > div{
+        overflow:hidden;
+        padding:22px 20px 20px;
+    }
+
+    > tbody > tr > td > div > div.white-space,
+    > thead > tr > td > div > .white-space{
+        background-color:white;
+        height:12px;
+        padding:0;
+    }
+
+    > tbody > tr > td > div.white-space-down{
+        background-color:white;
+        padding:0;
+        animation-name: white-space-down;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode:both;
+    }
+
+    > tbody > tr > td > div.white-space-up{
+        background-color:white;
+        padding:0;
+        opacity: 0; 
+        height:0; 
+    }
+
+    > tbody > tr > td > div.initAnimState-white-space{
+        height:0;
+    }
+
+    > tbody > tr > td > div.static-row .toggle-link{
+        color:#a3a3a3;
+    }
+
+    > tbody > tr > td > div.static-row:hover > span > .toggle-link{
+        color:@application-color;
+    }
+
+    > tbody > tr > td > .static-row:hover + .row-row-left {
+        border-left: 3px solid fade(@application-color-glow, 25%);height: 45px;float: left;position:absolute;margin-top:-45px;
+    }
+
+    .display-class{
+        display:inline-block;
+    }
+
+    .rotateClockWise{
+        animation-name: rotateClockWise;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode:both;
+    }
+
+    .rotateAntiClockWise{
+        animation-name: rotateAntiClockWise;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode:both;
+    }
+
+    .slideDown {
+        opacity: 1.0; 
+        height:100%; 
+    }
+
+    .slideUp {
+        overflow:hidden;
+        opacity: 0.0; 
+        height:0; 
+    }
+
+    .initAnimState{
+        opacity:0;
+        height: 0;
+        overflow:hidden;
+    }
+}
+
+@keyframes white-space-down {
+    0% {
+        opacity: 0; 
+        height:0; 
+    }
+    100% {
+        opacity: 1.0; 
+        height:12px; 
+    }
+}
+
+@keyframes rotateAntiClockWise{    
+    from{
+        transform: rotate(0deg);
+        transform-origin: center center;
+    }to{
+        transform: rotate(180deg);
+        transform-origin: center center;
+    }
+}
+
+@keyframes rotateClockWise{
+    from{
+        transform: rotate(180deg);
+        transform-origin: center center;
+    }to{
+        transform: rotate(0deg);
+        transform-origin: center center;
+    }
+}
+
+.top5 { margin-top:5px; }
+.top7 { margin-top:7px; }
+.top10 { margin-top:10px; }
+.top15 { margin-top:15px; }
+.top17 { margin-top:17px; }
+.top30 { margin-top:30px; }

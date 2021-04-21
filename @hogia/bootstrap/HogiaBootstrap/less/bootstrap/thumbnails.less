@@ -1,0 +1,56 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  display: block;
+  padding: @thumbnail-padding;
+  margin-bottom: @line-height-computed;
+  line-height: @line-height-base;
+  background-color: @thumbnail-bg;
+  // border: 1px solid @thumbnail-border;
+  border-radius: @thumbnail-border-radius;
+  .transition(all .2s ease-in-out);
+
+  >img,
+  a>img {
+    &:extend(.img-responsive);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Add a hover state for linked versions only
+  a&:hover,
+  a&:focus,
+  a&.active {
+    .box-shadow(4px 10px 14px rgba(0, 0, 0, 0.09));
+  }
+
+  // Image captions
+  .caption {
+    padding: @thumbnail-caption-padding;
+    color: @thumbnail-caption-color;
+  }
+}
+
+.img-thumbnail {
+  border-radius: 6px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px 1px rgba(10,16,34,.08);
+          box-shadow: 0 1px 1px 1px rgba(10,16,34,.08);
+  color: var(--black);
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: -webkit-transform .2s ease,-webkit-box-shadow .2s ease;
+  transition: -webkit-transform .2s ease,-webkit-box-shadow .2s ease;
+  transition: transform .2s ease,box-shadow .2s ease;
+  transition: transform .2s ease,box-shadow .2s ease,-webkit-transform .2s ease,-webkit-box-shadow .2s ease;
+  &:hover {
+    -webkit-box-shadow: 0 16px 32px 0 rgba(10,16,34,.2), 0 0 0 transparent;
+            box-shadow: 0 16px 32px 0 rgba(10,16,34,.2), 0 0 0 transparent;
+    -webkit-transform: translateY(-5px) translateZ(0);
+            transform: translateY(-5px) translateZ(0);
+  }
+}

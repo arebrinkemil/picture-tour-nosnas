@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "node-sass": "^5.0.0",
+        "@hogia/bootstrap": "^3.5.4"
+    },
+    "scripts": {
+        "scss": "node-sass --watch scss -o css"
+    }
+}

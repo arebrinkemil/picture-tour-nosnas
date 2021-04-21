@@ -1,0 +1,46 @@
+﻿@import '../bootstrap/mixins.less';
+@import '../bootstrap/variables.less';
+
+#gradient {
+    .half-n-half(@startColor: red, @endColor: green) {
+        background-color: @endColor;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@endColor), color-stop(50%,@endColor), color-stop(51%,@startColor), color-stop(100%,@startColor));
+        background-image: -webkit-linear-gradient(top, @endColor 0%,@endColor 50%,@startColor 51%,@startColor 100%);
+        background-image: linear-gradient(to bottom, @endColor 0%,@endColor 50%,@startColor 51%,@startColor 100%);
+        background-image: -moz-linear-gradient(top, @endColor 0%, @endColor 50%, @startColor 51%, @startColor 100%);
+        background-image: -o-linear-gradient(top, @endColor 0%,@endColor 50%,@startColor 51%,@startColor 100%);
+    }
+
+    .twisty(@startColor: red, @endColor: green, @deg: 357deg ) {
+        @percent1: 84%;
+        @percent2: @percent1 + 2;
+        background-color: @startColor;
+        background-image: -moz-linear-gradient(@deg, @endColor 0%, @endColor @percent1, @startColor @percent2, @startColor 100%);
+        background-image: -webkit-linear-gradient(@deg, @endColor 0%,@endColor @percent1,@startColor @percent2,@startColor 100%);
+        background-image: -o-linear-gradient(@deg, @endColor 0%,@endColor @percent1,@startColor @percent2,@startColor 100%);
+        background-image: linear-gradient(@deg, @endColor 0%,@endColor @percent1,@startColor @percent2,@startColor 100%);
+    }
+}
+
+
+.buttonBackground(@startColor, @endColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+    *background-color: @endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    color: @textColor;
+    .reset-filter();
+    // in these cases the gradient won't cover the background, so we override
+    &:hover, &:focus {
+        color: @textColor;
+        background-color: @endColor;
+        #gradient > .half-n-half(darken(@startColor, 6%), darken(@endColor, 2%));
+    }
+
+    &:active, &.active {
+        #gradient > .twisty(darken(@startColor, 6%), @endColor);
+    }
+
+    #gradient > .half-n-half(@startColor, @endColor);
+}
+
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}

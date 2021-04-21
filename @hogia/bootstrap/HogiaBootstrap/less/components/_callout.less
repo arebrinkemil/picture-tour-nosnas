@@ -1,0 +1,254 @@
+﻿@import '../_variables.less';
+
+
+.callout_css_grid {
+        //3.5 NEW DESIGN
+        margin: 20px 0px;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: @color-gray-text;
+            margin-top: @line-height-computed * 0.9;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 110px  auto;
+        }
+        
+        .box {
+            background-color: #444;
+            color: #333;
+            padding: 20px;
+            // font-size: 150%;
+            z-index:10;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            
+            &.call-out-icon {
+                background-color: @application-color-lighter;
+                text-align: center;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+
+                .fal {
+                    font-size: @fa-large-size;
+                    color: #fff;
+                    padding-right: unset;
+                }
+            }
+            
+            
+            &.call-out-content {
+                
+                background-color: @application-color-transparent;
+                
+            }
+            
+        }
+
+        &.callout-success {
+
+            .box {
+                &.call-out-icon {
+                    background-color: @color-concept-light-green !important;
+                }
+                &.call-out-content {
+                    background-color: @color-light-success;
+                }
+                
+                
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: @color-gray-text;
+            }
+        }
+        }
+        
+        &.callout-warning {
+            
+            
+            .box {
+                &.call-out-icon {
+                    background-color: @color-warning !important;
+                }
+                &.call-out-content {
+                    background-color: @color-light-warning;
+                }
+                
+                
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: @color-gray-text;
+            }
+        }
+    }
+    &.callout-info {
+        .box {
+            &.call-out-icon {
+                background-color: @color-info !important;
+            }
+            &.call-out-content {
+                background-color: @color-light-info;
+            }
+            
+            
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: @color-gray-text;
+        }
+        }
+    }
+        
+        
+        &.callout-danger {
+
+            .box {
+                &.call-out-icon {
+                    background-color: @color-danger !important;
+                }
+                &.call-out-content {
+                    background-color: @color-light-danger;
+                }
+                
+                
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: @color-gray-text;
+            }
+        }
+        //
+       
+    } 
+}
+
+
+
+
+
+    .callout {
+        
+        
+        border-left: 9px solid @application-color;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        margin: 20px 0px;
+        background-color: @application-color-transparent;
+        border-radius: 4px;
+        
+        p {
+            margin-top: 10px;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: @color-gray-text;
+            margin-top: @line-height-computed * 0.9;
+        }
+        
+        &.callout-info {
+            border-color: @info-color;
+            background-color: @color-light-info;
+            
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: @color-gray-text;
+            }
+        }
+        
+        &.callout-success {
+            border-color: @success-color;
+            background-color: @color-light-success;
+            
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+            color: @color-gray-text;
+        }
+    }
+    
+    &.callout-warning {
+        border-color: @warning-color;
+        background-color: @color-light-warning;
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: @color-gray-text;
+        }
+    }
+    
+    &.callout-danger {
+        border-color: @danger-color;
+        background-color: @color-light-danger;
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: @color-gray-text;
+        }
+    }
+}
+.callout_css_grid when (@application-color = @color-dark-turqouise) {
+    .box {
+        &.call-out-icon {
+        background-color: @color-semi-light-turqouise;
+        }
+    }
+}
