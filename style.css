@@ -28,12 +28,36 @@ html, body {
 
 }
 
+#logga {
+  padding: 1em 1em;
+  
+  
+}
+
+li[role=presentation] {
+  padding: 14px 14px;
+  
+  
+}
+  
+.scene {
+ color: white;
+}
+
 a, a:hover, a:active, a:visited {
   text-decoration: none;
   color: inherit;
 }
 
+#listaflex {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+}
+
 ul {
+ 
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -54,7 +78,8 @@ li a {
   display: block;
   color: rgb(0,0,0);
   text-align: center;
-  padding: 20px 15px 20px;
+  /*padding: 20px 15px 20px;*/
+  display:inline-block;
   font-weight: 700;
 font-size: 16px;
 letter-spacing: 1.22px;
@@ -63,7 +88,7 @@ letter-spacing: 1.22px;
 }
 
 li a:hover {
-  background-color: #111;
+ /* background-color: #111;*/
 }
 
 #pano {
@@ -80,7 +105,7 @@ li a:hover {
   /*top: 0;*/
   left: 0;
   right: 0px;
-  height: 40px;
+  height: 80px;
   text-align: center;
 }
 
@@ -179,15 +204,13 @@ body.fullscreen-enabled #fullscreenToggle {
 }
 
 #autorotateToggle {
-  display: block;
-  position: absolute;
+  position: relative;
+  z-index: 2;
   /*top: 0;*/
-  right: 0;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  background-color: rgb(255,218,26);
-  background-color: rgba(255,218,26,0.8);
+
+  width: 105px;
+  
+  height: 45px;
 }
 
 .mobile #autorotateToggle {
@@ -204,18 +227,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   right: 50px;
 }
 
-#autorotateToggle .icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
-}
 
-.mobile #autorotateToggle .icon {
-  top: 10px;
-  right: 10px;
-}
 
 #autorotateToggle .icon.on {
   display: none;
@@ -234,36 +246,22 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 #sceneListToggle {
-  position: absolute;
+  position: relative;
+  z-index: 2;
   /*top: 0;*/
-right: 0;
-  width: 40px;
-  margin-right: 80px;
-  height: 40px;
-  padding: 5px;
+
+  width: 105px;
+  
+  height: 45px;
+
+  /*
   background-color: rgb(255,218,26);
-  background-color: rgba(255,218,26,0.8);
+  background-color: rgba(255,218,26,0.8);*/
 }
 
 .mobile #sceneListToggle {
   width: 50px;
   height: 50px;
-}
-
-#sceneListToggle .text {
-  position: absolute;
-  top: 5px;
-  left: 15px;
-  width: 100%;
-  line-height: 30px;
-}
-
-#sceneListToggle .icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
 }
 
 .mobile #sceneListToggle .icon {
@@ -289,10 +287,11 @@ right: 0;
 
 #sceneList {
   position: absolute;
+  z-index: 1;
   /*top: 0;*/
   /*left: -220px;*/
   right: -220px;
-  padding-top: 85px;
+  padding-top: 80px;
   width: 220px;
   max-height: 100%;
   overflow-x: hidden;
@@ -309,7 +308,7 @@ right: 0;
 #sceneList .scenes {
   width: 100%;
   background-color: rgb(255,255,255);
-  background-color: rgba(255,255,255,0.8);
+  background-color: #808dfacc;
 }
 
 .mobile #sceneList {
